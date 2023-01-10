@@ -1,3 +1,4 @@
+// Chooses the move the computer will make
 function getComputerChoice() {
     let pcChoice = Math.floor((Math.random() * 3) + 1);
     
@@ -15,6 +16,7 @@ function getComputerChoice() {
     }
 }
 
+// Chooses the move the player will make
 function getPlayerChoice() {
     let move = prompt("What move would you like to make?");
     move = move.toLowerCase();
@@ -22,6 +24,7 @@ function getPlayerChoice() {
     return move;
  }
 
+ // Total wins 
 let playerWins = 0;
 let computerWins = 0;
 
@@ -67,7 +70,16 @@ function game() {
         console.log(playRound());
 }
 
-for ( let i = 0; i < 5; i++ ) {
-    game();
-}
 
+// // plays 5 rounds
+// for ( let i = 0; i < 5; i++ ) {
+//     game();
+// }
+
+const body = document.body;
+const rock = document.createElement("button");
+body.append("rock");
+const paper = document.createElement("button");
+body.append("paper");
+const scissor = document.createElement("button");
+body.append("scissor");

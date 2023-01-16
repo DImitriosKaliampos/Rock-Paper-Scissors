@@ -15,11 +15,11 @@ function getComputerChoice() {
     
 }
 
-function getPlayerChoice() {
-    let move = prompt("What move would you like to make?");
-    move = move.toLowerCase();
-    return move;
-}
+// function getPlayerChoice() {
+//     let move = prompt("What move would you like to make?");
+//     move = move.toLowerCase();
+//     return move;
+// }
 
 function playRound(playerSelection, computerSelection) {
     let pcMove = computerSelection;
@@ -32,7 +32,7 @@ function playRound(playerSelection, computerSelection) {
     }
     else if (pcMove === "Rock" && move === "Scissors") {
         // computerWins++;
-        return "You Lose! Rock beats Paper!";
+        return "You Lose! Rock beats Scissors!";
     }
     else if (pcMove === "Paper" && move === "Rock") {
         // computerWins++;
@@ -55,9 +55,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    playRound(getPlayerChoice(), getComputerChoice());
-}
+// function game() {
+//     playRound(getPlayerChoice(), getComputerChoice());
+// }
 
 let playerWins = 0;
 let computerWins = 0;
@@ -66,21 +66,21 @@ let computerWins = 0;
 
 document.getElementById("rock").addEventListener("click", function() {
     let pcMove = getComputerChoice();
-    document.getElementById("computerChoice").innerHTML = pcMove;
+    document.getElementById("computerChoice").innerHTML = "The computer chose: " + pcMove;
     document.getElementById("resultOfRound").innerHTML = playRound("Rock", pcMove);
     document.getElementById("score").innerHTML = scores("Rock", pcMove);
 });
 
 document.getElementById("paper").addEventListener("click", function() {
     let pcMove = getComputerChoice();
-    document.getElementById("computerChoice").innerHTML = pcMove;
+    document.getElementById("computerChoice").innerHTML = "The computer chose: " +pcMove;
     document.getElementById("resultOfRound").innerHTML = playRound("Paper", pcMove);
     document.getElementById("score").innerHTML = scores("Paper", pcMove);    
 }); 
 
 document.getElementById("scissors").addEventListener("click", function() {
     let pcMove = getComputerChoice();
-    document.getElementById("computerChoice").innerHTML = pcMove;
+    document.getElementById("computerChoice").innerHTML = "The computer chose: " +pcMove;
     document.getElementById("resultOfRound").innerHTML = playRound("Scissors", pcMove);
     document.getElementById("score").innerHTML = scores("Scissors", pcMove); 
 });

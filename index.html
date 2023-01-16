@@ -4,25 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-Paper-Scissors</title>
+    <title>A Space Pug's Tale!</title>
     <script src="myscripts.js" defer></script>
+    <link rel="stylesheet" href="./stylesheet.css">
 </head>
 <body>
-    <h1>This is a Rock-Paper-Scissors Emulator!</h1>
-    <h3>What move will you make?</h3>
-    <button id = "rock">Rock</button>
-    <button id = "paper">Paper</button>
-    <button id = "scissors">Scissors</button>
-    <!-- <p> The Computer chose: </p> -->
-    <p id = "computerChoice"> </p>
-    <p id = "resultOfRound"></p>
-    <p id = "score"></p>
+    <div class = "header">
+        <ul class = "top-links">
+            <li><a href="https://www.theodinproject.com/dashboard">Odin Project</a></li>
+            <li><a href="https://github.com/DImitriosKaliampos">GitHub</a></li>
+        </ul>
+    </div>
+    <div class = "background-img">
+        <img src = "images/space-background.jpg" alt="a picture of space" class = "background">
+    </div>
+    <div class = "main-body">
+        <h1 class = "title">Captain Pug needs your help!</h1>
+        <div class = "content-sidebar">
+            <div class="captain-pug">
+                <img src = "images/space-pug-floating-in-space.jpg" alt = "a portrait of a pug in a space suit" class = "portrait" id = "cpt">
+                <p class = "description"> Captain Pug, First of his name, in a mission to save humanity, colorized 1946</p>
+            </div>
+            <p class = "story"> Captain Pug has been attacked by ann alien! Help him by winning 5 games of rock-paper-scissors against the unknown force.</p> 
+        </div>
+        <div class = "game">    
+            <h3>What move will you make?</h3>
+            <div class = "buttons">
+                <button id = "rock">Rock</button>
+                <button id = "paper">Paper</button>
+                <button id = "scissors">Scissors</button>
+            </div>
+        </div>
+        <div class = "pop-up">
+            <p id = "computerChoice"> </p>
+            <p id = "resultOfRound"></p>
+            <p id = "score"></p>
+        </div>  
+    </div>
+    <div class = "footer">
+        <p>Trademark Copyright copy pasta</p>
+    </div>
 </body>
 </html>
-
-
-<!-- 1. For now, remove the logic that plays exactly five rounds.
-2. Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function with the correct playerSelection every time a button is clicked. (you can keep the console.logs for this step)
-3. Add a div for displaying results and change all of your console.logs into DOM methods.
-4. Display the running score, and announce a winner of the game once one player reaches 5 points.
-5. You will likely have to refactor (rework/rewrite) your original code to make it work for this. That’s OK! Reworking old code is an important part of a programmer’s life. -->

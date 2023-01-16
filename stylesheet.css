@@ -1,0 +1,119 @@
+/* * {
+    outline: red solid 1px;
+} */
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    gap: 16px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.top-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.footer {
+    display: flex;
+    /* sticks footer to the bottom of the page  */
+    margin-top: auto;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+#cpt {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+p, h1, h2, h3, h4 {
+    color: white;
+}
+
+.content-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.captain-pug {
+    /* display: flex; */
+    flex: 1 1 30%;
+    min-width: 25ch;
+    text-align: center;
+    font-style: italic;
+}
+
+.story {
+    /* display: flex; */
+    flex: 1 1 70%;
+    font-size: 30px;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 35px;
+} 
+
+button {
+    background-color: whitesmoke; /* Green */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+    border-radius: 0%;
+    transition-duration: 0.4s;
+    width: 200px;
+}
+
+button:hover {
+  background-color: #123fa1;
+  color: white;
+}
+
+.pop-up {
+    text-align: center;
+    font-size: 40px;
+}

@@ -66,21 +66,21 @@ let computerWins = 0;
 
 document.getElementById("rock").addEventListener("click", function() {
     let pcMove = getComputerChoice();
-    document.getElementById("computerChoice").innerHTML = "The computer chose: " + pcMove;
+    document.getElementById("computerChoice").innerHTML = "The Alien chose: " + pcMove;
     document.getElementById("resultOfRound").innerHTML = playRound("Rock", pcMove);
     document.getElementById("score").innerHTML = scores("Rock", pcMove);
 });
 
 document.getElementById("paper").addEventListener("click", function() {
     let pcMove = getComputerChoice();
-    document.getElementById("computerChoice").innerHTML = "The computer chose: " +pcMove;
+    document.getElementById("computerChoice").innerHTML = "The Alien chose: " +pcMove;
     document.getElementById("resultOfRound").innerHTML = playRound("Paper", pcMove);
     document.getElementById("score").innerHTML = scores("Paper", pcMove);    
 }); 
 
 document.getElementById("scissors").addEventListener("click", function() {
     let pcMove = getComputerChoice();
-    document.getElementById("computerChoice").innerHTML = "The computer chose: " +pcMove;
+    document.getElementById("computerChoice").innerHTML = "The Alien chose: " +pcMove;
     document.getElementById("resultOfRound").innerHTML = playRound("Scissors", pcMove);
     document.getElementById("score").innerHTML = scores("Scissors", pcMove); 
 });
@@ -89,17 +89,17 @@ function scores(playerSelection, computerSelection) {
     let pcMove = computerSelection;
     let move = playerSelection;
     if (pcMove === move) {
-        return "Player wins: " + playerWins + "\nComputer Wins: " + computerWins;
+        return "Your Wins: " + playerWins + "\nAlien Wins: " + computerWins;
     } 
     else if (pcMove === "Rock" && move === "Paper") {
         playerWins++;
         if ( playerWins === 5) {
-            document.getElementsById("rock").disabled = true;
+            document.getElementById("rock").disabled = true;
             document.getElementById("paper").disabled = true;
             document.getElementById("scissors").disabled = true;
-            return "Congratulations you won!"
+            return "You did it! You saved Captain Pug!"
         }
-        return "Player wins: " + playerWins + "\nComputer Wins: " + computerWins;
+        return "Your Wins: " + playerWins + "\nAlien Wins: " + computerWins;
     }
     else if (pcMove === "Rock" && move === "Scissors") {
         computerWins++;
@@ -107,9 +107,9 @@ function scores(playerSelection, computerSelection) {
             document.getElementById("rock").disabled = true;
             document.getElementById("paper").disabled = true;
             document.getElementById("scissors").disabled = true;
-            return "The computer won! You'll get them next time :)"
+            return "The Alien won, Captain Pug will always be remembered in our hearts...";
         }
-        return "Player wins: " + playerWins + "\nComputer Wins: " + computerWins;
+        return "Your Wins: " + playerWins + "\nAlien Wins: " + computerWins;
     }
     else if (pcMove === "Paper" && move === "Rock") {
         computerWins++;
@@ -117,9 +117,9 @@ function scores(playerSelection, computerSelection) {
             document.getElementById("rock").disabled = true;
             document.getElementById("paper").disabled = true;
             document.getElementById("scissors").disabled = true;
-            return "The computer won! You'll get them next time :)"
+            return "The Alien won, Captain Pug will always be remembered in our hearts..."
         }
-        return "Player wins: " + playerWins + "\nComputer Wins: " + computerWins;
+        return "Your Wins: " + playerWins + "\nAlien Wins: " + computerWins;
     }
     else if (pcMove === "Scissors" && move === "Paper") {
         computerWins++;
@@ -127,9 +127,9 @@ function scores(playerSelection, computerSelection) {
             document.getElementById("rock").disabled = true;
             document.getElementById("paper").disabled = true;
             document.getElementById("scissors").disabled = true;
-            return "The computer won! You'll get them next time :)"
+            return "The Alien won, Captain Pug will always be remembered in our hearts..."
         }
-        return "Player wins: " + playerWins + "\nComputer Wins: " + computerWins;
+        return "Your Wins: " + playerWins + "\nAlien Wins: " + computerWins;
     }
     else if (pcMove === "Scissors" && move === "Rock") {
         playerWins++;
@@ -137,9 +137,9 @@ function scores(playerSelection, computerSelection) {
             document.getElementById("rock").disabled = true;
             document.getElementById("paper").disabled = true;
             document.getElementById("scissors").disabled = true;
-            return "Congratulations you won!"
+            return "You did it! You saved Captain Pug!"
         }
-        return "Player wins: " + playerWins + "\nComputer Wins: " + computerWins;
+        return "Your Wins: " + playerWins + "\nAlien Wins: " + computerWins;
     }
     else if (pcMove === "Paper" && move === "Scissors") {
         playerWins++;
@@ -147,9 +147,9 @@ function scores(playerSelection, computerSelection) {
             document.getElementById("rock").disabled = true;
             document.getElementById("paper").disabled = true;
             document.getElementById("scissors").disabled = true;
-            return "Congratulations you won!"
+            return "You did it! You saved Captain Pug!"
         }
-        return "Player wins: " + playerWins + "\nComputer Wins: " + computerWins;
+        return "Your Wins: " + playerWins + "\nAlien Wins: " + computerWins;
     }
     else {
         console.log("ERROR")
